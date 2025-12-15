@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu & Packages - Signature Events Catering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513',
+                        secondary: '#D4AF37',
+                        accent: '#2C1810'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+
+        .package-card {
+            transition: all 0.3s ease;
+        }
+
+        .package-card:hover {
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl sm:text-3xl font-heading font-bold text-primary">Signature Events</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-primary transition">Services</a>
+                    <a href="menu.html" class="text-primary font-semibold">Menu & Packages</a>
+                    <a href="index.html#about" class="text-gray-700 hover:text-primary transition">About</a>
+                    <a href="index.html#contact" class="text-gray-700 hover:text-primary transition">Contact</a>
+                </div>
+                <a href="index.html#contact" class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-full transition">
+                    Get Quote
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-primary/10 to-secondary/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl sm:text-6xl font-heading font-bold text-primary mb-6">
+                Our Menu & Packages
+            </h1>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                Discover our carefully crafted catering packages and exquisite menu selections. From intimate gatherings to grand celebrations, we have the perfect option for your event.
+            </p>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">Catering Packages</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Choose from our three signature packages, each designed to deliver exceptional value and unforgettable taste
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Essential Package -->
+                <div class="package-card bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-gray-200">
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 text-center">
+                        <h3 class="text-2xl font-heading font-bold text-primary mb-2">Essential</h3>
+                        <p class="text-gray-600 mb-4">Perfect for casual gatherings</p>
+                        <div class="text-5xl font-bold text-primary mb-2">$35</div>
+                        <div class="text-gray-600">per person</div>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>3 Appetizer selections</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Choice of 2 main courses</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>2 Side dishes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Fresh salad bar</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Dessert platter</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Non-alcoholic beverages</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Disposable serviceware</span>
+                            </li>
+                        </ul>
+                        <a href="index.html#contact" class="mt-8 block w-full bg-gray-700 hover:bg-gray-800 text-white py-3 rounded-lg font-semibold text-center transition">
+                            Select Package
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Premium Package -->
+                <div class="package-card bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-secondary relative transform scale-105">
+                    <div class="absolute top-0 right-0 bg-secondary text-accent px-6 py-2 rounded-bl-lg font-bold text-sm">
+                        MOST POPULAR
+                    </div>
+                    <div class="bg-gradient-to-br from-primary to-accent p-8 text-center text-white">
+                        <h3 class="text-2xl font-heading font-bold mb-2">Premium</h3>
+                        <p class="text-gray-200 mb-4">Ideal for special celebrations</p>
+                        <div class="text-5xl font-bold mb-2">$55</div>
+                        <div class="text-gray-200">per person</div>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="font-semibold">Everything in Essential, plus:</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>5 Gourmet appetizers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Choice of 3 premium entrees</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>3 Artisan side dishes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Signature dessert station</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>China plates & glassware</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Professional service staff</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Linen tablecloths & napkins</span>
+                            </li>
+                        </ul>
+                        <a href="index.html#contact" class="mt-8 block w-full bg-secondary hover:bg-yellow-600 text-accent py-3 rounded-lg font-semibold text-center transition">
+                            Select Package
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Luxury Package -->
+                <div class="package-card bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-gray-200">
+                    <div class="bg-gradient-to-br from-secondary to-yellow-600 p-8 text-center text-accent">
+                        <h3 class="text-2xl font-heading font-bold mb-2">Luxury</h3>
+                        <p class="text-gray-800 mb-4">The ultimate experience</p>
+                        <div class="text-5xl font-bold mb-2">$85</div>
+                        <div class="text-gray-800">per person</div>
+                    </div>
+                    <div class="p-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="font-semibold">Everything in Premium, plus:</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Unlimited passed hors d'oeuvres</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Custom-designed menu</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Live cooking stations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Premium bar service</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Champagne toast service</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Full event coordination</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Executive chef on-site</span>
+                            </li>
+                        </ul>
+                        <a href="index.html#contact" class="mt-8 block w-full bg-primary hover:bg-accent text-white py-3 rounded-lg font-semibold text-center transition">
+                            Select Package
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center bg-gray-50 p-6 rounded-xl">
+                <p class="text-gray-700">
+                    <span class="font-semibold">Minimum order:</span> 25 guests |
+                    <span class="font-semibold">Add-ons available:</span> Bar service, specialty cocktails, live stations, dessert upgrades
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Items Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">Sample Menu Selections</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Browse our curated selection of dishes. All menus are fully customizable to suit your preferences and dietary needs.
+                </p>
+            </div>
+
+            <!-- Appetizers -->
+            <div class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="flex-grow h-px bg-secondary"></div>
+                    <h3 class="text-3xl font-heading font-bold text-primary px-6">Appetizers</h3>
+                    <div class="flex-grow h-px bg-secondary"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Bruschetta Trio</h4>
+                            <span class="text-secondary font-bold">★</span>
+                        </div>
+                        <p class="text-gray-600">Heirloom tomato basil, wild mushroom, and roasted red pepper on crostini</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Shrimp Cocktail</h4>
+                        </div>
+                        <p class="text-gray-600">Jumbo shrimp with house-made cocktail sauce and lemon</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Caprese Skewers</h4>
+                        </div>
+                        <p class="text-gray-600">Fresh mozzarella, cherry tomatoes, basil, balsamic glaze</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Crab Cakes</h4>
+                            <span class="text-secondary font-bold">★</span>
+                        </div>
+                        <p class="text-gray-600">Maryland-style lump crab with remoulade sauce</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Stuffed Mushrooms</h4>
+                        </div>
+                        <p class="text-gray-600">Baby bellas filled with herb cream cheese and Italian sausage</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Spring Rolls</h4>
+                        </div>
+                        <p class="text-gray-600">Vegetable spring rolls with sweet chili dipping sauce</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Courses -->
+            <div class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="flex-grow h-px bg-secondary"></div>
+                    <h3 class="text-3xl font-heading font-bold text-primary px-6">Main Courses</h3>
+                    <div class="flex-grow h-px bg-secondary"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Herb-Crusted Beef Tenderloin</h4>
+                            <span class="text-secondary font-bold">★</span>
+                        </div>
+                        <p class="text-gray-600">Prime beef with red wine reduction and roasted garlic</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Grilled Salmon</h4>
+                            <span class="text-secondary font-bold">★</span>
+                        </div>
+                        <p class="text-gray-600">Atlantic salmon with lemon dill butter and capers</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Chicken Marsala</h4>
+                        </div>
+                        <p class="text-gray-600">Pan-seared chicken breast with mushroom marsala wine sauce</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Braised Short Ribs</h4>
+                        </div>
+                        <p class="text-gray-600">Slow-cooked beef ribs in rich red wine sauce</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Vegetarian Lasagna</h4>
+                        </div>
+                        <p class="text-gray-600">Layers of pasta, seasonal vegetables, ricotta, and marinara</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Roasted Pork Loin</h4>
+                        </div>
+                        <p class="text-gray-600">Apple cider-glazed pork with autumn spice rub</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sides -->
+            <div class="mb-16">
+                <div class="flex items-center mb-8">
+                    <div class="flex-grow h-px bg-secondary"></div>
+                    <h3 class="text-3xl font-heading font-bold text-primary px-6">Side Dishes</h3>
+                    <div class="flex-grow h-px bg-secondary"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <h4 class="text-lg font-semibold text-primary mb-2">Garlic Mashed Potatoes</h4>
+                        <p class="text-gray-600 text-sm">Creamy Yukon gold potatoes</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <h4 class="text-lg font-semibold text-primary mb-2">Roasted Vegetables</h4>
+                        <p class="text-gray-600 text-sm">Seasonal vegetables, olive oil, herbs</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <h4 class="text-lg font-semibold text-primary mb-2">Wild Rice Pilaf</h4>
+                        <p class="text-gray-600 text-sm">With toasted almonds and cranberries</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <h4 class="text-lg font-semibold text-primary mb-2">Grilled Asparagus</h4>
+                        <p class="text-gray-600 text-sm">With lemon zest and parmesan</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div>
+                <div class="flex items-center mb-8">
+                    <div class="flex-grow h-px bg-secondary"></div>
+                    <h3 class="text-3xl font-heading font-bold text-primary px-6">Desserts</h3>
+                    <div class="flex-grow h-px bg-secondary"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Chocolate Decadence Cake</h4>
+                            <span class="text-secondary font-bold">★</span>
+                        </div>
+                        <p class="text-gray-600">Rich chocolate layer cake with ganache frosting</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Tiramisu</h4>
+                        </div>
+                        <p class="text-gray-600">Classic Italian dessert with espresso and mascarpone</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">New York Cheesecake</h4>
+                        </div>
+                        <p class="text-gray-600">Creamy cheesecake with berry compote</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Fruit Tart</h4>
+                        </div>
+                        <p class="text-gray-600">Buttery crust with vanilla custard and fresh seasonal fruit</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Crème Brûlée</h4>
+                            <span class="text-secondary font-bold">★</span>
+                        </div>
+                        <p class="text-gray-600">Classic French custard with caramelized sugar</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow hover-scale cursor-pointer">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-semibold text-primary">Mini Dessert Trio</h4>
+                        </div>
+                        <p class="text-gray-600">Assorted mini pastries, tarts, and chocolate treats</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-2"><span class="text-secondary font-bold">★</span> = Chef's Signature Dishes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dietary Options -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-heading font-bold text-primary mb-4">Dietary Accommodations</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    We cater to all dietary needs and preferences
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl text-center">
+                    <div class="text-4xl mb-3">🌱</div>
+                    <h4 class="text-xl font-semibold text-primary mb-2">Vegetarian</h4>
+                    <p class="text-gray-700">Full vegetarian menu options available</p>
+                </div>
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl text-center">
+                    <div class="text-4xl mb-3">🥗</div>
+                    <h4 class="text-xl font-semibold text-primary mb-2">Vegan</h4>
+                    <p class="text-gray-700">Plant-based dishes crafted with care</p>
+                </div>
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-xl text-center">
+                    <div class="text-4xl mb-3">🌾</div>
+                    <h4 class="text-xl font-semibold text-primary mb-2">Gluten-Free</h4>
+                    <p class="text-gray-700">Celiac-safe preparation available</p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl text-center">
+                    <div class="text-4xl mb-3">✨</div>
+                    <h4 class="text-xl font-semibold text-primary mb-2">Custom</h4>
+                    <p class="text-gray-700">Kosher, Halal, and other dietary needs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-primary to-accent text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-5xl font-heading font-bold mb-6">
+                Ready to Create Your Perfect Menu?
+            </h2>
+            <p class="text-xl mb-8 text-gray-200">
+                Let's discuss your event and craft a custom menu that will delight your guests. Get your free consultation and quote today.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact" class="bg-secondary hover:bg-yellow-600 text-accent px-8 py-4 rounded-full text-lg font-semibold transition hover-scale">
+                    Request a Quote
+                </a>
+                <a href="index.html" class="bg-white/10 backdrop-blur-sm hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold transition">
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white text-xl font-heading font-bold mb-4">Signature Events Catering</h3>
+                    <p class="text-sm">
+                        Creating unforgettable culinary experiences in New Jersey since 2010.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-secondary transition">Home</a></li>
+                        <li><a href="index.html#services" class="hover:text-secondary transition">Services</a></li>
+                        <li><a href="menu.html" class="hover:text-secondary transition">Menu & Packages</a></li>
+                        <li><a href="index.html#contact" class="hover:text-secondary transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>456 Culinary Avenue</li>
+                        <li>Montclair, NJ 07042</li>
+                        <li>(973) 555-CATER</li>
+                        <li>hello@signatureeventscatering.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Business Hours</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Mon-Fri: 9:00 AM - 6:00 PM</li>
+                        <li>Saturday: 10:00 AM - 4:00 PM</li>
+                        <li>Sunday: By Appointment</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2025 Signature Events Catering. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
