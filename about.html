@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Signature Events Catering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513',
+                        secondary: '#D4AF37',
+                        accent: '#2C1810'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            background: #D4AF37;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #D4AF37;
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl sm:text-3xl font-heading font-bold text-primary">Signature Events</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-primary transition">Services</a>
+                    <a href="menu.html" class="text-gray-700 hover:text-primary transition">Menu & Packages</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-primary transition">Gallery</a>
+                    <a href="about.html" class="text-primary font-semibold">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-primary transition">Contact</a>
+                </div>
+                <a href="contact.html" class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-full transition">
+                    Get Quote
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-primary/10 to-secondary/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-5xl sm:text-6xl font-heading font-bold text-primary mb-6">
+                    About Signature Events
+                </h1>
+                <p class="text-2xl text-gray-700 mb-8 font-heading italic">
+                    "Creating Unforgettable Moments, One Event at a Time"
+                </p>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    For over 15 years, Signature Events Catering has been New Jersey's premier choice for exceptional culinary experiences. We believe that great food brings people together and creates memories that last a lifetime.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-gradient-to-br from-primary/5 to-primary/10 p-10 rounded-2xl">
+                    <div class="text-4xl mb-4 text-secondary">🎯</div>
+                    <h2 class="text-3xl font-heading font-bold text-primary mb-4">Our Mission</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        To deliver exceptional culinary experiences that exceed expectations, transform ordinary events into extraordinary celebrations, and create lasting memories for our clients and their guests through innovative cuisine, impeccable service, and unwavering attention to detail.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-secondary/5 to-secondary/10 p-10 rounded-2xl">
+                    <div class="text-4xl mb-4 text-secondary">✨</div>
+                    <h2 class="text-3xl font-heading font-bold text-primary mb-4">Our Vision</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        To be recognized as the most trusted and innovative catering company in New Jersey, setting the standard for culinary excellence, sustainable practices, and personalized service that makes every event a signature experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Story -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">Our Story</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    A journey of passion, dedication, and culinary excellence
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&h=600&fit=crop"
+                         alt="Restaurant kitchen"
+                         class="rounded-2xl shadow-xl">
+                </div>
+                <div>
+                    <h3 class="text-3xl font-heading font-bold text-primary mb-6">From Humble Beginnings</h3>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Signature Events Catering was founded in 2010 by Chef Michael Romano and his wife, Elena, in a small commercial kitchen in Montclair, New Jersey. What started as a passion project quickly grew into one of the region's most sought-after catering companies.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Chef Michael, a graduate of the Culinary Institute of America, brought his fine dining expertise from renowned New York City restaurants to create innovative, memorable menus. Elena, with her background in event planning, ensured every detail was perfect.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Their combined vision was simple: exceptional food paired with extraordinary service. This philosophy continues to guide everything we do today.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-3xl font-heading font-bold text-primary mb-12 text-center">Our Journey</h3>
+                <div class="relative">
+                    <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-secondary"></div>
+
+                    <div class="mb-12 relative pl-20">
+                        <div class="absolute left-6 top-2 timeline-dot"></div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <div class="text-2xl font-bold text-secondary mb-2">2010</div>
+                            <h4 class="text-xl font-semibold text-primary mb-2">The Beginning</h4>
+                            <p class="text-gray-700">Founded by Chef Michael and Elena Romano in Montclair, NJ. First event: a 50-person wedding reception.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-12 relative pl-20">
+                        <div class="absolute left-6 top-2 timeline-dot"></div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <div class="text-2xl font-bold text-secondary mb-2">2013</div>
+                            <h4 class="text-xl font-semibold text-primary mb-2">Expansion</h4>
+                            <p class="text-gray-700">Moved to a larger facility and expanded the team to 15 members. Reached milestone of 100 events catered annually.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-12 relative pl-20">
+                        <div class="absolute left-6 top-2 timeline-dot"></div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <div class="text-2xl font-bold text-secondary mb-2">2016</div>
+                            <h4 class="text-xl font-semibold text-primary mb-2">Recognition</h4>
+                            <p class="text-gray-700">Named "Best Caterer in Northern New Jersey" by NJ Monthly. Introduced farm-to-table sustainable sourcing.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-12 relative pl-20">
+                        <div class="absolute left-6 top-2 timeline-dot"></div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <div class="text-2xl font-bold text-secondary mb-2">2019</div>
+                            <h4 class="text-xl font-semibold text-primary mb-2">Innovation</h4>
+                            <p class="text-gray-700">Launched interactive live cooking stations and custom cocktail programs. Team grows to 40+ professionals.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-20">
+                        <div class="absolute left-6 top-2 timeline-dot"></div>
+                        <div class="bg-white p-6 rounded-xl shadow-lg">
+                            <div class="text-2xl font-bold text-secondary mb-2">2025</div>
+                            <h4 class="text-xl font-semibold text-primary mb-2">Today</h4>
+                            <p class="text-gray-700">Over 2,000 events catered, 98% client satisfaction rate, and still growing. Committed to excellence every single day.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">Meet Our Team</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    The talented professionals who bring your events to life
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover-scale cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=400&fit=crop"
+                         alt="Chef Michael Romano"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-bold text-primary mb-1">Chef Michael Romano</h3>
+                        <p class="text-secondary font-semibold mb-3">Executive Chef & Co-Founder</p>
+                        <p class="text-gray-700 text-sm">
+                            CIA graduate with 25+ years of culinary experience. Passionate about farm-to-table cuisine and creating unforgettable flavors.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover-scale cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
+                         alt="Elena Romano"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-bold text-primary mb-1">Elena Romano</h3>
+                        <p class="text-secondary font-semibold mb-3">CEO & Co-Founder</p>
+                        <p class="text-gray-700 text-sm">
+                            Event planning expert with an eye for detail. Ensures every client receives personalized, stress-free service from start to finish.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover-scale cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?w=400&h=400&fit=crop"
+                         alt="Chef Maria Santos"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-bold text-primary mb-1">Chef Maria Santos</h3>
+                        <p class="text-secondary font-semibold mb-3">Pastry Chef</p>
+                        <p class="text-gray-700 text-sm">
+                            Award-winning pastry specialist who transforms desserts into edible art. Her creations are the perfect finale to any event.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover-scale cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop"
+                         alt="David Chen"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-bold text-primary mb-1">David Chen</h3>
+                        <p class="text-secondary font-semibold mb-3">Operations Director</p>
+                        <p class="text-gray-700 text-sm">
+                            Logistics maestro who coordinates every detail. Ensures seamless execution from kitchen to venue, on time, every time.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover-scale cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop"
+                         alt="Sarah Williams"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-bold text-primary mb-1">Sarah Williams</h3>
+                        <p class="text-secondary font-semibold mb-3">Event Coordinator</p>
+                        <p class="text-gray-700 text-sm">
+                            Your dedicated partner in planning. Works closely with clients to understand their vision and bring it to life flawlessly.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover-scale cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=400&h=400&fit=crop"
+                         alt="Chef James Thompson"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-bold text-primary mb-1">Chef James Thompson</h3>
+                        <p class="text-secondary font-semibold mb-3">Sous Chef</p>
+                        <p class="text-gray-700 text-sm">
+                            Culinary innovator specializing in fusion cuisine. Brings creativity and precision to every dish that leaves our kitchen.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member 7 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover-scale cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=400&fit=crop"
+                         alt="Lisa Patterson"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-bold text-primary mb-1">Lisa Patterson</h3>
+                        <p class="text-secondary font-semibold mb-3">Beverage Director</p>
+                        <p class="text-gray-700 text-sm">
+                            Sommelier and mixologist who curates perfect drink pairings and signature cocktails for your celebration.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member 8 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover-scale cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop"
+                         alt="Marcus Johnson"
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-heading font-bold text-primary mb-1">Marcus Johnson</h3>
+                        <p class="text-secondary font-semibold mb-3">Service Manager</p>
+                        <p class="text-gray-700 text-sm">
+                            Leads our professional service team with warmth and expertise, ensuring your guests receive exceptional hospitality.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">Our Core Values</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    The principles that guide everything we do
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🌟</div>
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-4">Excellence</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        We pursue perfection in every dish, every detail, and every interaction. Our commitment to excellence drives us to continuously improve and innovate.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">❤️</div>
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-4">Passion</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Food is our passion, and it shows. We love what we do, and we bring that enthusiasm to every event, creating experiences that resonate with heart and soul.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🤝</div>
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-4">Integrity</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Honesty and transparency guide our business. We deliver on our promises, use quality ingredients, and treat everyone with respect and fairness.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">💡</div>
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-4">Innovation</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        We stay ahead of culinary trends while honoring classic techniques. Innovation keeps our menus fresh, exciting, and perfectly suited to modern tastes.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">🌱</div>
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-4">Sustainability</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        We source locally whenever possible, minimize waste, and support sustainable farming practices. Good food should be good for the planet too.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-5xl mb-4">👥</div>
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-4">Community</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        We're proud members of the New Jersey community. We support local suppliers, give back through charitable events, and treat clients like family.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">Why Choose Signature Events</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    What sets us apart from other catering companies
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex items-start space-x-4 bg-gray-50 p-6 rounded-xl">
+                    <div class="flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white text-xl font-bold">
+                        ✓
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Customizable Menus</h3>
+                        <p class="text-gray-700">Every menu is tailored to your preferences, dietary needs, and event style. No cookie-cutter packages here.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4 bg-gray-50 p-6 rounded-xl">
+                    <div class="flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white text-xl font-bold">
+                        ✓
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Award-Winning Chefs</h3>
+                        <p class="text-gray-700">Our culinary team has trained at prestigious institutions and worked in top restaurants across the country.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4 bg-gray-50 p-6 rounded-xl">
+                    <div class="flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white text-xl font-bold">
+                        ✓
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Fresh, Local Ingredients</h3>
+                        <p class="text-gray-700">We partner with New Jersey farms and suppliers to bring you the freshest, highest-quality seasonal ingredients.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4 bg-gray-50 p-6 rounded-xl">
+                    <div class="flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white text-xl font-bold">
+                        ✓
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Professional Service Staff</h3>
+                        <p class="text-gray-700">Our experienced servers are trained to provide seamless, attentive service that enhances your event.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4 bg-gray-50 p-6 rounded-xl">
+                    <div class="flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white text-xl font-bold">
+                        ✓
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Full-Service Planning</h3>
+                        <p class="text-gray-700">From tastings to day-of coordination, we handle every detail so you can enjoy your event stress-free.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4 bg-gray-50 p-6 rounded-xl">
+                    <div class="flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white text-xl font-bold">
+                        ✓
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-primary mb-2">Proven Track Record</h3>
+                        <p class="text-gray-700">With 2,000+ successful events and a 98% satisfaction rate, our reputation speaks for itself.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Awards -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">Awards & Recognition</h2>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow text-center">
+                    <div class="text-4xl mb-3">🏆</div>
+                    <h4 class="font-semibold text-primary mb-2">Best Caterer</h4>
+                    <p class="text-sm text-gray-600">NJ Monthly 2016, 2019, 2023</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow text-center">
+                    <div class="text-4xl mb-3">⭐</div>
+                    <h4 class="font-semibold text-primary mb-2">5-Star Rating</h4>
+                    <p class="text-sm text-gray-600">The Knot, WeddingWire, Yelp</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow text-center">
+                    <div class="text-4xl mb-3">✅</div>
+                    <h4 class="font-semibold text-primary mb-2">ServSafe Certified</h4>
+                    <p class="text-sm text-gray-600">All kitchen staff certified</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow text-center">
+                    <div class="text-4xl mb-3">🌿</div>
+                    <h4 class="font-semibold text-primary mb-2">Green Business</h4>
+                    <p class="text-sm text-gray-600">NJ Sustainable Business</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-primary to-accent text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-5xl font-heading font-bold mb-6">
+                Ready to Work With Us?
+            </h2>
+            <p class="text-xl mb-8 text-gray-200">
+                Let's create something extraordinary together. Contact us today to start planning your perfect event.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact" class="bg-secondary hover:bg-yellow-600 text-accent px-8 py-4 rounded-full text-lg font-semibold transition hover-scale">
+                    Get Started
+                </a>
+                <a href="menu.html" class="bg-white/10 backdrop-blur-sm hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold transition">
+                    View Our Menus
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white text-xl font-heading font-bold mb-4">Signature Events Catering</h3>
+                    <p class="text-sm">
+                        Creating unforgettable culinary experiences in New Jersey since 2010.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-secondary transition">Home</a></li>
+                        <li><a href="index.html#services" class="hover:text-secondary transition">Services</a></li>
+                        <li><a href="menu.html" class="hover:text-secondary transition">Menu & Packages</a></li>
+                        <li><a href="gallery.html" class="hover:text-secondary transition">Gallery</a></li>
+                        <li><a href="about.html" class="hover:text-secondary transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>456 Culinary Avenue</li>
+                        <li>Montclair, NJ 07042</li>
+                        <li>(973) 555-CATER</li>
+                        <li>hello@signatureeventscatering.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Business Hours</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Mon-Fri: 9:00 AM - 6:00 PM</li>
+                        <li>Saturday: 10:00 AM - 4:00 PM</li>
+                        <li>Sunday: By Appointment</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2025 Signature Events Catering. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

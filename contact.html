@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Signature Events Catering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513',
+                        secondary: '#D4AF37',
+                        accent: '#2C1810'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+
+        .faq-item {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl sm:text-3xl font-heading font-bold text-primary">Signature Events</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-primary transition">Services</a>
+                    <a href="menu.html" class="text-gray-700 hover:text-primary transition">Menu & Packages</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-primary transition">Gallery</a>
+                    <a href="about.html" class="text-gray-700 hover:text-primary transition">About</a>
+                    <a href="contact.html" class="text-primary font-semibold">Contact</a>
+                </div>
+                <a href="#quote-form" class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-full transition">
+                    Get Quote
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-primary/10 to-secondary/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl sm:text-6xl font-heading font-bold text-primary mb-6">
+                Let's Start Planning
+            </h1>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                Ready to create an unforgettable event? Get in touch with us today. We're here to answer your questions, provide a custom quote, and help bring your vision to life.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Methods Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Multiple ways to reach us - choose what works best for you
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl text-center hover-scale">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-primary mb-2">Call Us</h3>
+                    <p class="text-gray-700 mb-2 font-semibold">(973) 555-CATER</p>
+                    <p class="text-gray-600 text-sm">Mon-Fri: 9AM-6PM</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl text-center hover-scale">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-primary mb-2">Email Us</h3>
+                    <p class="text-gray-700 mb-2 font-semibold text-sm">hello@signatureeventscatering.com</p>
+                    <p class="text-gray-600 text-sm">Response within 24 hours</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl text-center hover-scale">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-primary mb-2">Visit Us</h3>
+                    <p class="text-gray-700 mb-2 font-semibold text-sm">456 Culinary Avenue</p>
+                    <p class="text-gray-600 text-sm">Montclair, NJ 07042</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-2xl text-center hover-scale">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-primary mb-2">Book Tasting</h3>
+                    <p class="text-gray-700 mb-2 font-semibold text-sm">Schedule a Visit</p>
+                    <p class="text-gray-600 text-sm">Complimentary for events</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section id="quote-form" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">Request a Custom Quote</h2>
+                <p class="text-xl text-gray-600">
+                    Fill out the form below and we'll get back to you within 24 hours with a personalized proposal
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                <form class="space-y-6">
+                    <!-- Personal Information -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">First Name *</label>
+                            <input type="text" required
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                   placeholder="John">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Last Name *</label>
+                            <input type="text" required
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                   placeholder="Smith">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Email Address *</label>
+                            <input type="email" required
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                   placeholder="john@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Phone Number *</label>
+                            <input type="tel" required
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                   placeholder="(555) 123-4567">
+                        </div>
+                    </div>
+
+                    <!-- Event Information -->
+                    <div class="border-t border-gray-200 pt-6 mt-6">
+                        <h3 class="text-2xl font-heading font-bold text-primary mb-6">Event Details</h3>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Event Type *</label>
+                                <select required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option value="">Select event type</option>
+                                    <option>Wedding</option>
+                                    <option>Corporate Event</option>
+                                    <option>Birthday Party</option>
+                                    <option>Anniversary</option>
+                                    <option>Graduation</option>
+                                    <option>Holiday Party</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Expected Guest Count *</label>
+                                <input type="number" required min="1"
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                       placeholder="50">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6 mt-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Event Date *</label>
+                                <input type="date" required
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Preferred Package</label>
+                                <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option value="">Select a package</option>
+                                    <option>Essential ($35/person)</option>
+                                    <option>Premium ($55/person)</option>
+                                    <option>Luxury ($85/person)</option>
+                                    <option>Custom Package</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Event Location</label>
+                            <input type="text"
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                   placeholder="Venue name or address (if known)">
+                        </div>
+
+                        <div class="mt-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Meal Service Style</label>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary">
+                                    <span class="text-gray-700">Buffet</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary">
+                                    <span class="text-gray-700">Plated</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary">
+                                    <span class="text-gray-700">Family Style</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary">
+                                    <span class="text-gray-700">Stations</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Preferences -->
+                    <div class="border-t border-gray-200 pt-6 mt-6">
+                        <h3 class="text-2xl font-heading font-bold text-primary mb-6">Additional Preferences</h3>
+
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Dietary Restrictions or Special Requests</label>
+                            <textarea rows="4"
+                                      class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                                      placeholder="Please let us know about any dietary restrictions, allergies, specific menu preferences, or other special requirements..."></textarea>
+                        </div>
+
+                        <div class="mt-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Additional Services Needed</label>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary">
+                                    <span class="text-gray-700">Bar Service</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary">
+                                    <span class="text-gray-700">Rentals (tables, chairs, linens)</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary">
+                                    <span class="text-gray-700">Service Staff</span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input type="checkbox" class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary">
+                                    <span class="text-gray-700">Setup & Cleanup</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="mt-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Estimated Budget</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Select budget range</option>
+                                <option>Under $2,000</option>
+                                <option>$2,000 - $5,000</option>
+                                <option>$5,000 - $10,000</option>
+                                <option>$10,000 - $20,000</option>
+                                <option>Over $20,000</option>
+                                <option>Flexible</option>
+                            </select>
+                        </div>
+
+                        <div class="mt-6">
+                            <label class="block text-gray-700 font-semibold mb-2">How Did You Hear About Us?</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Select an option</option>
+                                <option>Google Search</option>
+                                <option>Social Media</option>
+                                <option>Wedding/Event Website</option>
+                                <option>Friend or Family Referral</option>
+                                <option>Previous Client</option>
+                                <option>Venue Recommendation</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <button type="submit"
+                                class="w-full bg-primary hover:bg-accent text-white py-4 rounded-lg font-semibold text-lg transition shadow-lg hover:shadow-xl">
+                            Submit Quote Request
+                        </button>
+                        <p class="text-center text-sm text-gray-600 mt-4">
+                            We'll respond within 24 hours with a custom proposal tailored to your event
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">Find Us</h2>
+                <p class="text-xl text-gray-600">
+                    Visit our kitchen and tasting room in Montclair, New Jersey
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="bg-gray-50 p-8 rounded-2xl">
+                        <h3 class="text-2xl font-heading font-bold text-primary mb-6">Location Details</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-primary mb-1">Address</h4>
+                                    <p class="text-gray-700">456 Culinary Avenue<br>Montclair, NJ 07042</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-primary mb-1">Business Hours</h4>
+                                    <p class="text-gray-700">
+                                        Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                        Saturday: 10:00 AM - 4:00 PM<br>
+                                        Sunday: By Appointment Only
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-primary mb-1">Parking</h4>
+                                    <p class="text-gray-700">Free parking available in our lot behind the building. Street parking also available.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-primary mb-1">Tasting Appointments</h4>
+                                    <p class="text-gray-700">Schedule a complimentary tasting for events of 50+ guests. Call to book your appointment.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden shadow-xl h-96">
+                    <!-- Embedded Google Maps -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12065.274992745926!2d-74.21493994999999!3d40.8256626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2ff3c7e394f7d%3A0x9a2b0e02b7c55b72!2sMontclair%2C%20NJ%2007042!5e0!3m2!1sen!2sus!4v1234567890123"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600">
+                    Quick answers to common questions about our catering services
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-primary pr-8">What is the minimum guest count for catering?</h3>
+                        <svg class="faq-icon w-6 h-6 text-secondary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            Our minimum guest count is 25 people for full-service catering. For smaller gatherings, we offer drop-off catering options for groups as small as 10. Contact us to discuss your specific needs.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-primary pr-8">How far in advance should I book?</h3>
+                        <svg class="faq-icon w-6 h-6 text-secondary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            For weddings and large events, we recommend booking 6-12 months in advance. For corporate events and smaller gatherings, 4-6 weeks notice is ideal. However, we can often accommodate last-minute requests with 1-2 weeks notice depending on availability.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-primary pr-8">Do you offer tastings?</h3>
+                        <svg class="faq-icon w-6 h-6 text-secondary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            Yes! We offer complimentary tastings for events with 50+ guests. Tastings typically include 3-4 appetizers, 2-3 entrees, and 2 desserts from your selected package. Tastings must be scheduled in advance and are available Tuesday-Saturday.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-primary pr-8">Can you accommodate dietary restrictions?</h3>
+                        <svg class="faq-icon w-6 h-6 text-secondary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            Absolutely! We regularly accommodate vegetarian, vegan, gluten-free, dairy-free, nut-free, and other dietary needs. We can also prepare kosher and halal meals with advance notice. Just let us know your requirements when booking.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-primary pr-8">What's included in your catering packages?</h3>
+                        <svg class="faq-icon w-6 h-6 text-secondary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            Our packages include food preparation, delivery, setup, serving pieces, and basic cleanup. Premium and Luxury packages also include professional service staff, china/glassware, and linens. Additional services like bar service, rentals, and full event coordination are available as add-ons.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-primary pr-8">Do you provide bar service?</h3>
+                        <svg class="faq-icon w-6 h-6 text-secondary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            Yes! We offer full bar service including beer, wine, spirits, and signature cocktails. Our licensed bartenders can create custom drink menus for your event. We can provide the alcohol, or you can purchase your own and we'll provide the bartender and setup.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-primary pr-8">What areas do you serve?</h3>
+                        <svg class="faq-icon w-6 h-6 text-secondary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            We primarily serve Northern New Jersey including Essex, Bergen, Morris, Passaic, Hudson, and Union counties. We can also travel to other areas of New Jersey and parts of New York for larger events. Travel fees may apply for events outside our primary service area.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6 flex justify-between items-center">
+                        <h3 class="text-xl font-semibold text-primary pr-8">What is your cancellation policy?</h3>
+                        <svg class="faq-icon w-6 h-6 text-secondary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            We require a 50% deposit to secure your date, which is non-refundable within 30 days of the event. Cancellations more than 30 days prior receive a 50% refund. Guest count adjustments can be made up to 7 days before the event. Full payment is due 7 days before the event date.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media & Additional Contact -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">Connect With Us</h2>
+                <p class="text-xl text-gray-600">
+                    Follow us on social media for inspiration, updates, and special offers
+                </p>
+            </div>
+
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="bg-primary hover:bg-accent p-4 rounded-full transition hover-scale">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a href="#" class="bg-primary hover:bg-accent p-4 rounded-full transition hover-scale">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="#" class="bg-primary hover:bg-accent p-4 rounded-full transition hover-scale">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="#" class="bg-primary hover:bg-accent p-4 rounded-full transition hover-scale">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-4">Prefer to talk? We'd love to hear from you!</p>
+                <a href="tel:9735552283" class="text-3xl font-heading font-bold text-primary hover:text-secondary transition">
+                    (973) 555-CATER
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white text-xl font-heading font-bold mb-4">Signature Events Catering</h3>
+                    <p class="text-sm">
+                        Creating unforgettable culinary experiences in New Jersey since 2010.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-secondary transition">Home</a></li>
+                        <li><a href="index.html#services" class="hover:text-secondary transition">Services</a></li>
+                        <li><a href="menu.html" class="hover:text-secondary transition">Menu & Packages</a></li>
+                        <li><a href="gallery.html" class="hover:text-secondary transition">Gallery</a></li>
+                        <li><a href="about.html" class="hover:text-secondary transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>456 Culinary Avenue</li>
+                        <li>Montclair, NJ 07042</li>
+                        <li>(973) 555-CATER</li>
+                        <li>hello@signatureeventscatering.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Business Hours</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Mon-Fri: 9:00 AM - 6:00 PM</li>
+                        <li>Saturday: 10:00 AM - 4:00 PM</li>
+                        <li>Sunday: By Appointment</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2025 Signature Events Catering. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                // Close all FAQ items
+                faqItems.forEach(faq => faq.classList.remove('active'));
+
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Form submission (would need backend integration)
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your quote request! We will contact you within 24 hours.');
+            form.reset();
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Signature Events Catering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513',
+                        secondary: '#D4AF37',
+                        accent: '#2C1810'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active {
+            background-color: #8B4513;
+            color: white;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.95);
+            animation: fadeIn 0.3s;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            animation: zoomIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); }
+            to { transform: scale(1); }
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .close-modal:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl sm:text-3xl font-heading font-bold text-primary">Signature Events</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="index.html#services" class="text-gray-700 hover:text-primary transition">Services</a>
+                    <a href="menu.html" class="text-gray-700 hover:text-primary transition">Menu & Packages</a>
+                    <a href="gallery.html" class="text-primary font-semibold">Gallery</a>
+                    <a href="about.html" class="text-gray-700 hover:text-primary transition">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-primary transition">Contact</a>
+                </div>
+                <a href="contact.html" class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-full transition">
+                    Get Quote
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-primary/10 to-secondary/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl sm:text-6xl font-heading font-bold text-primary mb-6">
+                Our Portfolio
+            </h1>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                Explore our culinary artistry and event transformations. From intimate gatherings to grand celebrations, see how we bring visions to life through exceptional food and stunning presentations.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="py-12 bg-white sticky top-20 z-40 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="filter-btn active px-6 py-3 rounded-full border-2 border-primary text-primary font-semibold" data-filter="all">
+                    All
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border-2 border-primary text-primary font-semibold" data-filter="weddings">
+                    Weddings
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border-2 border-primary text-primary font-semibold" data-filter="corporate">
+                    Corporate Events
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border-2 border-primary text-primary font-semibold" data-filter="appetizers">
+                    Appetizers
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border-2 border-primary text-primary font-semibold" data-filter="entrees">
+                    Main Courses
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border-2 border-primary text-primary font-semibold" data-filter="desserts">
+                    Desserts
+                </button>
+                <button class="filter-btn px-6 py-3 rounded-full border-2 border-primary text-primary font-semibold" data-filter="setups">
+                    Event Setups
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+
+                <!-- Wedding Images -->
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="weddings">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&h=600&fit=crop"
+                         alt="Elegant wedding reception setup"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Elegant Wedding Reception</h3>
+                            <p class="text-sm">Princeton, NJ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="weddings">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&h=600&fit=crop"
+                         alt="Outdoor wedding catering"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Garden Wedding Celebration</h3>
+                            <p class="text-sm">Montclair, NJ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="weddings">
+                    <img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=800&h=600&fit=crop"
+                         alt="Wedding buffet table"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Luxury Wedding Buffet</h3>
+                            <p class="text-sm">Jersey City, NJ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corporate Events -->
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="corporate">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop"
+                         alt="Corporate event catering"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Corporate Gala Dinner</h3>
+                            <p class="text-sm">Newark, NJ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="corporate">
+                    <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=800&h=600&fit=crop"
+                         alt="Business lunch setup"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Executive Lunch Meeting</h3>
+                            <p class="text-sm">Hoboken, NJ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="corporate">
+                    <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&h=600&fit=crop"
+                         alt="Conference catering"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Conference Catering</h3>
+                            <p class="text-sm">Summit, NJ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appetizers -->
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="appetizers">
+                    <img src="https://images.unsplash.com/photo-1478144592103-25e218a04891?w=800&h=600&fit=crop"
+                         alt="Gourmet appetizers platter"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Artisan Charcuterie Board</h3>
+                            <p class="text-sm">Chef's Selection</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="appetizers">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=600&fit=crop"
+                         alt="Bruschetta appetizers"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Heirloom Tomato Bruschetta</h3>
+                            <p class="text-sm">Fresh & Seasonal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="appetizers">
+                    <img src="https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?w=800&h=600&fit=crop"
+                         alt="Shrimp cocktail"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Jumbo Shrimp Cocktail</h3>
+                            <p class="text-sm">Signature Sauce</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="appetizers">
+                    <img src="https://images.unsplash.com/photo-1608877907149-a206d75ba011?w=800&h=600&fit=crop"
+                         alt="Caprese skewers"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Caprese Skewers</h3>
+                            <p class="text-sm">Balsamic Glaze</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Courses -->
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="entrees">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&h=600&fit=crop"
+                         alt="Grilled steak dinner"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Herb-Crusted Beef Tenderloin</h3>
+                            <p class="text-sm">Red Wine Reduction</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="entrees">
+                    <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=800&h=600&fit=crop"
+                         alt="Grilled salmon"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Atlantic Salmon</h3>
+                            <p class="text-sm">Lemon Dill Butter</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="entrees">
+                    <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=800&h=600&fit=crop"
+                         alt="Chicken marsala"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Chicken Marsala</h3>
+                            <p class="text-sm">Mushroom Wine Sauce</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="entrees">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&h=600&fit=crop"
+                         alt="Fresh salad"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Garden Fresh Salad</h3>
+                            <p class="text-sm">Seasonal Vegetables</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="desserts">
+                    <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&h=600&fit=crop"
+                         alt="Wedding cake"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Elegant Wedding Cake</h3>
+                            <p class="text-sm">Five-Tier Masterpiece</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="desserts">
+                    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&h=600&fit=crop"
+                         alt="Chocolate cake"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Chocolate Decadence</h3>
+                            <p class="text-sm">Ganache Frosting</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="desserts">
+                    <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&h=600&fit=crop"
+                         alt="Dessert table"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Dessert Station</h3>
+                            <p class="text-sm">Assorted Pastries</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="desserts">
+                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=800&h=600&fit=crop"
+                         alt="Fruit tart"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Fresh Fruit Tart</h3>
+                            <p class="text-sm">Vanilla Custard</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="desserts">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&h=600&fit=crop"
+                         alt="Macarons"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">French Macarons</h3>
+                            <p class="text-sm">Assorted Flavors</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Setups -->
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="setups">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&h=600&fit=crop"
+                         alt="Party table setup"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Birthday Celebration Setup</h3>
+                            <p class="text-sm">Themed Decor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="setups">
+                    <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=800&h=600&fit=crop"
+                         alt="Buffet station"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Buffet Service Station</h3>
+                            <p class="text-sm">Professional Setup</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="setups">
+                    <img src="https://images.unsplash.com/photo-1511795409834-432f7b1728b2?w=800&h=600&fit=crop"
+                         alt="Elegant table setting"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Elegant Table Setting</h3>
+                            <p class="text-sm">China & Linens</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="setups">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop"
+                         alt="Fine dining setup"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Gourmet Plating</h3>
+                            <p class="text-sm">Chef's Presentation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="setups weddings">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f29da8ba0a?w=800&h=600&fit=crop"
+                         alt="Outdoor event setup"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Outdoor Event Setup</h3>
+                            <p class="text-sm">Al Fresco Dining</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item rounded-xl shadow-lg overflow-hidden" data-category="setups">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop"
+                         alt="Breakfast catering"
+                         class="w-full h-80 object-cover">
+                    <div class="gallery-overlay">
+                        <div class="text-white">
+                            <h3 class="text-xl font-heading font-bold mb-1">Breakfast Spread</h3>
+                            <p class="text-sm">Morning Meeting</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Full Size Images -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Full size image">
+    </div>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-primary to-accent text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-5xl font-heading font-bold mb-6">
+                Love What You See?
+            </h2>
+            <p class="text-xl mb-8 text-gray-200">
+                Let's create something beautiful for your next event. Contact us today to discuss your vision and get a custom quote.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact" class="bg-secondary hover:bg-yellow-600 text-accent px-8 py-4 rounded-full text-lg font-semibold transition">
+                    Request a Quote
+                </a>
+                <a href="menu.html" class="bg-white/10 backdrop-blur-sm hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold transition">
+                    View Our Menus
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white text-xl font-heading font-bold mb-4">Signature Events Catering</h3>
+                    <p class="text-sm">
+                        Creating unforgettable culinary experiences in New Jersey since 2010.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-secondary transition">Home</a></li>
+                        <li><a href="index.html#services" class="hover:text-secondary transition">Services</a></li>
+                        <li><a href="menu.html" class="hover:text-secondary transition">Menu & Packages</a></li>
+                        <li><a href="gallery.html" class="hover:text-secondary transition">Gallery</a></li>
+                        <li><a href="about.html" class="hover:text-secondary transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>456 Culinary Avenue</li>
+                        <li>Montclair, NJ 07042</li>
+                        <li>(973) 555-CATER</li>
+                        <li>hello@signatureeventscatering.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Business Hours</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Mon-Fri: 9:00 AM - 6:00 PM</li>
+                        <li>Saturday: 10:00 AM - 4:00 PM</li>
+                        <li>Sunday: By Appointment</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2025 Signature Events Catering. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    const categories = item.getAttribute('data-category');
+
+                    if (filterValue === 'all') {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else if (categories.includes(filterValue)) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeModal = document.querySelector('.close-modal');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const img = this.querySelector('img');
+                modal.classList.add('active');
+                modalImg.src = img.src;
+                modalImg.alt = img.alt;
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
