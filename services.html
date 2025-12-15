@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Signature Events Catering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B4513',
+                        secondary: '#D4AF37',
+                        accent: '#2C1810'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+        .font-heading {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="font-body text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl sm:text-3xl font-heading font-bold text-primary">Signature Events</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-primary transition">Home</a>
+                    <a href="services.html" class="text-primary font-semibold">Services</a>
+                    <a href="menu.html" class="text-gray-700 hover:text-primary transition">Menu & Packages</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-primary transition">Gallery</a>
+                    <a href="about.html" class="text-gray-700 hover:text-primary transition">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-primary transition">Contact</a>
+                </div>
+                <a href="contact.html" class="bg-primary hover:bg-accent text-white px-6 py-2 rounded-full transition">
+                    Get Quote
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-primary/10 to-secondary/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl sm:text-6xl font-heading font-bold text-primary mb-6">
+                Our Catering Services
+            </h1>
+            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                From intimate gatherings to grand celebrations, we provide full-service catering tailored to your vision. Every event receives our signature blend of culinary excellence and impeccable service.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">Event Catering Services</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Specialized catering for every occasion
+                </p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Wedding Catering -->
+                <div class="service-card bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="order-2 md:order-1 p-8 md:p-12">
+                            <div class="inline-block bg-secondary text-accent px-4 py-1 rounded-full text-sm font-semibold mb-4">
+                                Most Popular
+                            </div>
+                            <h3 class="text-3xl font-heading font-bold text-primary mb-4">Wedding Catering</h3>
+                            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                                Your wedding day deserves nothing less than perfection. We work closely with you to create a custom menu that reflects your style and delights your guests. From elegant plated dinners to interactive food stations, we bring your culinary vision to life.
+                            </p>
+
+                            <h4 class="text-xl font-semibold text-primary mb-3">What's Included:</h4>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-700">Complimentary tasting for two with menu consultation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-700">Customized menu design to match your theme</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-700">Professional service staff and event coordinator</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-700">China, glassware, and elegant linens</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-700">Full setup, service, and cleanup</span>
+                                </li>
+                            </ul>
+
+                            <a href="contact.html" class="inline-block bg-primary hover:bg-accent text-white px-8 py-3 rounded-full font-semibold transition">
+                                Plan Your Wedding
+                            </a>
+                        </div>
+                        <div class="order-1 md:order-2">
+                            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=800&h=600&fit=crop"
+                                 alt="Wedding catering"
+                                 class="w-full h-full object-cover min-h-[400px]">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corporate Events -->
+                <div class="service-card bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop"
+                                 alt="Corporate catering"
+                                 class="w-full h-full object-cover min-h-[400px]">
+                        </div>
+                        <div class="p-8 md:p-12">
+                            <h3 class="text-3xl font-heading font-bold text-primary mb-4">Corporate Event Catering</h3>
+                            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                                Impress clients and energize your team with professional corporate catering. From breakfast meetings to holiday parties, conferences to client appreciation events, we deliver on-time, every time.
+                            </p>
+
+                            <h4 class="text-xl font-semibold text-primary mb-3">Perfect For:</h4>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-700">Executive meetings and board retreats</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-700">Conferences and seminars</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-700">Holiday parties and team celebrations</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-700">Product launches and networking events</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-700">Employee appreciation events</span>
+                                </li>
+                            </ul>
+
+                            <div class="bg-secondary/10 p-4 rounded-lg mb-6">
+                                <p class="text-sm text-gray-700">
+                                    <strong>Volume Discounts Available:</strong> Regular corporate clients receive special pricing and priority scheduling.
+                                </p>
+                            </div>
+
+                            <a href="contact.html" class="inline-block bg-primary hover:bg-accent text-white px-8 py-3 rounded-full font-semibold transition">
+                                Get Corporate Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Private Events -->
+                <div class="service-card bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="order-2 md:order-1 p-8 md:p-12">
+                            <h3 class="text-3xl font-heading font-bold text-primary mb-4">Private Events & Celebrations</h3>
+                            <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                                Life's special moments deserve exceptional catering. Whether it's a milestone birthday, anniversary, graduation, or holiday celebration, we create memorable culinary experiences for your guests.
+                            </p>
+
+                            <h4 class="text-xl font-semibold text-primary mb-3">We Cater:</h4>
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <ul class="space-y-2">
+                                    <li class="flex items-center text-gray-700">
+                                        <span class="text-secondary mr-2">•</span> Birthday Parties
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <span class="text-secondary mr-2">•</span> Anniversaries
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <span class="text-secondary mr-2">•</span> Graduations
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <span class="text-secondary mr-2">•</span> Baptisms
+                                    </li>
+                                </ul>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center text-gray-700">
+                                        <span class="text-secondary mr-2">•</span> Engagement Parties
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <span class="text-secondary mr-2">•</span> Retirement
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <span class="text-secondary mr-2">•</span> Holiday Gatherings
+                                    </li>
+                                    <li class="flex items-center text-gray-700">
+                                        <span class="text-secondary mr-2">•</span> Backyard BBQs
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <h4 class="text-xl font-semibold text-primary mb-3">Flexible Options:</h4>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-700">Full-service catering with staff</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-700">Drop-off catering for smaller gatherings</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 text-secondary mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-gray-700">Custom themes and decorations</span>
+                                </li>
+                            </ul>
+
+                            <a href="contact.html" class="inline-block bg-primary hover:bg-accent text-white px-8 py-3 rounded-full font-semibold transition">
+                                Plan Your Celebration
+                            </a>
+                        </div>
+                        <div class="order-1 md:order-2">
+                            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&h=600&fit=crop"
+                                 alt="Private event catering"
+                                 class="w-full h-full object-cover min-h-[400px]">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">Our Process</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    From first contact to the final toast, we make planning your event effortless
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-bold text-white">1</span>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-primary mb-3">Initial Consultation</h3>
+                    <p class="text-gray-700">
+                        Contact us to discuss your event vision, guest count, date, and budget. We'll answer all your questions.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-bold text-white">2</span>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-primary mb-3">Custom Proposal</h3>
+                    <p class="text-gray-700">
+                        Receive a detailed proposal with menu options, pricing, and service details tailored to your needs.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-bold text-white">3</span>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-primary mb-3">Menu Tasting</h3>
+                    <p class="text-gray-700">
+                        Sample our dishes and finalize your menu. We'll adjust recipes to match your preferences perfectly.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-3xl font-bold text-white">4</span>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold text-primary mb-3">Event Day Excellence</h3>
+                    <p class="text-gray-700">
+                        We arrive early, set up perfectly, serve impeccably, and clean up completely. You just enjoy!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add-On Services -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">Add-On Services</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Enhance your event with our additional services
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-2xl hover-scale">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-3">Bar Service</h3>
+                    <p class="text-gray-700 mb-4">
+                        Professional bartenders, full bar setup, signature cocktails, beer, wine, and spirits.
+                    </p>
+                    <p class="text-sm text-secondary font-semibold">Starting at $500</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl hover-scale">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-3">Event Coordination</h3>
+                    <p class="text-gray-700 mb-4">
+                        Dedicated coordinator to manage timeline, vendors, and ensure everything runs smoothly.
+                    </p>
+                    <p class="text-sm text-secondary font-semibold">Starting at $750</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl hover-scale">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-3">Rentals</h3>
+                    <p class="text-gray-700 mb-4">
+                        Tables, chairs, linens, china, glassware, flatware, and decorative pieces.
+                    </p>
+                    <p class="text-sm text-secondary font-semibold">Custom pricing</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl hover-scale">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-3">Live Cooking Stations</h3>
+                    <p class="text-gray-700 mb-4">
+                        Interactive chef stations for pasta, carving, omelets, stir-fry, or custom creations.
+                    </p>
+                    <p class="text-sm text-secondary font-semibold">Starting at $350/station</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl hover-scale">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-3">Custom Cakes & Desserts</h3>
+                    <p class="text-gray-700 mb-4">
+                        Specialty wedding cakes, dessert bars, chocolate fountains, and custom sweet treats.
+                    </p>
+                    <p class="text-sm text-secondary font-semibold">Starting at $200</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-2xl hover-scale">
+                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-heading font-bold text-primary mb-3">Custom Menu Design</h3>
+                    <p class="text-gray-700 mb-4">
+                        Printed menus, place cards, and signage designed to match your event theme.
+                    </p>
+                    <p class="text-sm text-secondary font-semibold">Starting at $150</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl sm:text-5xl font-heading font-bold text-primary mb-4">Service Areas</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Proudly serving Northern New Jersey and beyond
+                </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-heading font-bold text-primary mb-6">Primary Service Area</h3>
+                        <p class="text-gray-700 mb-4">
+                            We provide full catering services throughout Northern New Jersey with no travel fees:
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-secondary mr-2">✓</span> Essex County
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-secondary mr-2">✓</span> Bergen County
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-secondary mr-2">✓</span> Morris County
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-secondary mr-2">✓</span> Passaic County
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-secondary mr-2">✓</span> Hudson County
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-secondary mr-2">✓</span> Union County
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-heading font-bold text-primary mb-6">Extended Service Area</h3>
+                        <p class="text-gray-700 mb-4">
+                            We also cater events in the following areas (travel fees may apply):
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-secondary mr-2">✓</span> All of New Jersey
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-secondary mr-2">✓</span> New York City & Westchester
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-secondary mr-2">✓</span> Eastern Pennsylvania
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-secondary mr-2">✓</span> Connecticut (Southern)
+                            </li>
+                        </ul>
+                        <p class="text-sm text-gray-600 italic">
+                            Contact us about events outside these areas. For larger events, we're happy to travel!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-primary to-accent text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl sm:text-5xl font-heading font-bold mb-6">
+                Ready to Plan Your Event?
+            </h2>
+            <p class="text-xl mb-8 text-gray-200">
+                Let's discuss your vision and create a custom catering plan that exceeds your expectations. Contact us today for a free consultation and quote.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-secondary hover:bg-yellow-600 text-accent px-8 py-4 rounded-full text-lg font-semibold transition hover-scale">
+                    Request a Quote
+                </a>
+                <a href="menu.html" class="bg-white/10 backdrop-blur-sm hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold transition">
+                    View Our Menus
+                </a>
+            </div>
+
+            <div class="mt-12 pt-12 border-t border-white/20">
+                <p class="text-lg mb-4">Have questions? We're here to help!</p>
+                <a href="tel:9735552283" class="text-3xl font-heading font-bold hover:text-secondary transition">
+                    (973) 555-CATER
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white text-xl font-heading font-bold mb-4">Signature Events Catering</h3>
+                    <p class="text-sm">
+                        Creating unforgettable culinary experiences in New Jersey since 2010.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-secondary transition">Home</a></li>
+                        <li><a href="services.html" class="hover:text-secondary transition">Services</a></li>
+                        <li><a href="menu.html" class="hover:text-secondary transition">Menu & Packages</a></li>
+                        <li><a href="gallery.html" class="hover:text-secondary transition">Gallery</a></li>
+                        <li><a href="about.html" class="hover:text-secondary transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>456 Culinary Avenue</li>
+                        <li>Montclair, NJ 07042</li>
+                        <li>(973) 555-CATER</li>
+                        <li>hello@signatureeventscatering.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Business Hours</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Mon-Fri: 9:00 AM - 6:00 PM</li>
+                        <li>Saturday: 10:00 AM - 4:00 PM</li>
+                        <li>Sunday: By Appointment</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2025 Signature Events Catering. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
